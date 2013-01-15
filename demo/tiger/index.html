@@ -1,30 +1,38 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title> New Document </title>
+ <!-- disable iPhone inital scale -->
+	<meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />
+  <title>ÀÏ»¢»ú</title>
   <style type="text/css">
-	.mydiv{width:128px;height:128px; overflow:hidden;}
+	body{width:100%;height:100%;}
+	.mydiv{width:128px;height:128px;margin:0;padding:0; overflow:hidden;float:left;}
 	.mydiv img{margin:0;padding:0;float:left; }
   </style>
-  <script src="jquery.js" ></script>
+  <script src="zepto.js" ></script>
   <script src="tiger.js" ></script>
+
   <script type="text/javascript">
 	$(function(){
 		var tiger = new Tiger({tiger:$(".mydiv")});
-
-		$("#btnPlay").click(function(){			
+		console.log($("html").width());
+		$("#btnPlay").click(function(){	
+			var that =this;	
 			tiger.play();
-		});
+			$(that).attr("disabled",true);
+			setTimeout(function(){tiger.stop(
+				function(){$(that).removeAttr("disabled")}
+			);},2000);
 
-		$("#btnStop").click(function(){
-			tiger.stop();
 		});
 	});
   </script>
  </head>
  <body>  
-	<input type="button" id="btnPlay" value="Play">
-	<input type="button" id="btnStop" value="Stop">
+
+
+
+	<input type="button" id="btnPlay" value="Ò¡½±" style="width:128px;height:128px;">
 	<div class="mydiv">
 		<img src="png/1090462.png" width="128" height="128" border="0" alt="">		
 		<img src="png/1090463.png" width="128" height="128" border="0" alt="">		
