@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> New Document </title>
+  <style type="text/css">
+	.mydiv{width:128px;height:128px; overflow:hidden;}
+	.mydiv img{margin:0;padding:0;float:left; }
+  </style>
+  <script src="jquery.js" ></script>
+  <script src="tiger.js" ></script>
+  <script type="text/javascript">
+	$(function(){
+		var tiger = new Tiger({tiger:$(".mydiv")});
+
+		$("#btnPlay").click(function(){			
+			tiger.play();
+		});
+
+		$("#btnStop").click(function(){
+			tiger.stop();
+		});
+	});
+  </script>
+ </head>
+ <body>  
+	<input type="button" id="btnPlay" value="Play">
+	<input type="button" id="btnStop" value="Stop">
+	<div class="mydiv">
+		<img src="png/1090462.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090463.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090464.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090465.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090466.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090467.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090469.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090470.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090471.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090472.png" width="128" height="128" border="0" alt="">
+	</div>
+	<div class="mydiv">
+		<img src="png/1090462.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090463.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090464.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090465.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090466.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090467.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090469.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090470.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090471.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090472.png" width="128" height="128" border="0" alt="">
+	</div>
+	<div class="mydiv">
+		<img src="png/1090462.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090463.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090464.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090465.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090466.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090467.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090469.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090470.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090471.png" width="128" height="128" border="0" alt="">		
+		<img src="png/1090472.png" width="128" height="128" border="0" alt="">
+	</div>
+ </body>
+</html>

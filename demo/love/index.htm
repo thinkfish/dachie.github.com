@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>计算您的完美身材，其实你很完美!</title>
+<script>
+        window.onload=function(){
+                var height= document.getElementById('height');
+                var _btn= document.getElementById('btn');
+                var _msg= document.getElementById('msg');
+                _btn.onclick=function(){
+                if(height.value ==""){
+                                _msg.innerHTML="请输入您的身高哦"
+                                height.focus();
+                }else if(!/^[1]\d{2}$/.test(height.value)){
+                                _msg.innerHTML="请输入正确的身高哦，必须是三位数的整数哦亲"
+                                height.focus();                        
+                }else{
+                                var _height=height.value; 
+                                _msg.innerHTML="您的身高是"+_height+"<br />"+"您的标准体重应该是"+((_height-112)-((_height-112)*0.05))+"<br />"+"您的标准腰围应该是"+(_height*0.37)+"<br />"+
+                                "您的标准胸围应该是"+(_height*0.53)+"<br />"+"您的标准臀围应该是"+(_height*0.54)+"<br />"+"您的标准大腿围应该是"+(_height*0.26+7.8)+"<br />"+"您的标准小腿围应该是"+(_height*0.18);
+                }
+                }
+        }
+</script>
+</head>
+
+<body>
+<form >
+    <input type="text" id="height" placeholder="输入您的身高"/>
+    <input type="button" id="btn" value="确定"/>
+</form>
+<div id="msg" style="font-size:14px; line-height:20px; margin-top:30px;"></div>
+</body>
+</html>

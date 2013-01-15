@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,height=device-height, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var img = document.getElementById("img1");
+            document.ontouchmove = function (e) {
+                e.preventDefault();
+            }
+            img.ontouchmove = function (e) {
+                var x = e.targetTouches[0].clientX - (img.width / 2);
+                var y = e.targetTouches[0].clientY - (img.height / 2);
+                e.preventDefault();
+                img.style.webkitTransform = 'translate(' + x + 'px, ' + y + 'px)';
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" src="touch.png" />
+</body>
+</html>
