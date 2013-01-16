@@ -200,12 +200,10 @@ blockquote {
   border-left: 3px solid #bbb;
 }
 
-
-ul li {
-  list-style: inside;
-  padding-left: 20px;
-}
-
+ul.tabs{width:100%;}
+ul.tabs li{float:left;list-style:none;cursor:pointer;display:inline-block;height:30px;background-color:#C6C8CB;text-align:center;border:1px solid #999;line-height:30px;min-width:70px;}
+ul.tabs li.cur{background:#eee;}
+div.tabscontent ol{display:none;margin-top:40px;}
 ol li{list-style:none;display:inline-block;height:72px;min-width:72px;padding-left:0;line-height:72px;text-align:center;}
 
 dl dt {

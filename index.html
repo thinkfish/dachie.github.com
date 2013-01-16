@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>    
+<html>
+    
     <head>
         <meta charset='utf-8' />
         <meta http-equiv="X-UA-Compatible" content="chrome=1" />
         <meta name="description" content="达奇工作室" />
         <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/main.js"></script>
         <title>
             达奇工作室
         </title>
@@ -33,7 +36,7 @@
                     <form name="f1" onsubmit="return g(this)" style="right:0;position:absolute;">
                         <div style="font-size:9pt;">
                             <input name=word size="30" maxlength="100" x-webkit-speech speech style="height:25px;">
-                            <input type="submit" value="百度搜索"  style="height:30px;">
+                            <input type="submit" value="百度搜索" style="height:30px;">
                             <input name=tn type=hidden value="bds">
                             <input name=cl type=hidden value="3">
                             <input name=ct type=hidden>
@@ -50,23 +53,85 @@
         </div>
         <!-- MAIN CONTENT -->
         <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">                
-				<h3>
+            <section id="main_content" class="inner">
+                <h3>
                     导航
                 </h3>
                 <div class="pre">
-                    <ol>
+                    <ul class="tabs">
                         <li>
-                            <a href="http://www.w3school.com.cn" target="_blank">
-                                W3C
-                            </a>
+                            常用
                         </li>
-						<li>
-                            <a href="http://www.w3cfuns.com" target="_blank">
-                                w3cfuns
-                            </a>
+                        <li>
+                            互联网
                         </li>
-                    </ol>
+                        <li>
+                            移动Web
+                        </li>
+                        <li>
+                            JSFrame
+                        </li>
+                        <li>
+                            Tools
+                        </li>
+                        <li>
+                            Other
+                        </li>
+                    </ul>
+                    <div class="tabscontent">
+                        <ol>
+                            <li>
+                                <a href="http://www.w3school.com.cn" target="_blank">
+                                    W3C
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.w3cfuns.com" target="_blank">
+                                    w3cfuns
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="http://www.quqiaoqiao.com" target="_blank">
+                                    去瞧瞧
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.showeb20.com" target="_blank">
+                                    分享网络2.0
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="http://webservices.ctocio.com.cn/293/12270293.shtml" target="_blank">
+                                    10大移动Web框架
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="http://www.css88.com/jqapi-1.7/" target="_blank">
+                                    jQuery 1.7 中文API
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="http://tool.chinaz.com/Tools/JsFormat.aspx" target="_blank">
+                                    JavaScript/HTML格式化
+                                </a>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <a href="http://www.dystour.com/ds/playerinfo.aspx?fldID=1044" target="_blank">
+                                    德阳旅游形象大使
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
                 <h3>
                     油猴
@@ -76,7 +141,8 @@
                 <div class="pre">
                     <ol>
                         <li>
-                            <a href="http://userscripts.org/scripts/show/149186" title="年费会员每日抽奖" target="_blank">
+                            <a href="http://userscripts.org/scripts/show/149186" title="年费会员每日抽奖"
+                            target="_blank">
                                 yearVip
                             </a>
                         </li>
