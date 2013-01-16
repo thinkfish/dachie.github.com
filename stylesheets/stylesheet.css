@@ -206,10 +206,7 @@ ul li {
   padding-left: 20px;
 }
 
-ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
-}
+ol li{list-style:none;display:inline-block;height:72px;min-width:72px;padding-left:0;line-height:72px;text-align:center;}
 
 dl dt {
   font-weight: bold;
