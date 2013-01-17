@@ -11,14 +11,11 @@
 		body{background:#000;color:#fff;margin:0;padding:0;}
 		
 		
-		#wrapper{
-			float:left;
-			position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
-			z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
-			overflow:hidden;
+		#wrapper{			/* it seems that recent webkit is less picky and works anyway. */
+			
 			}
 		#main{background:blue;position:absolute;z-index:100;}
-		.nav{background:red;width:320px;}
+		.nav{background:red;}
         </style>
         <script src="zepto.js">
         </script>
@@ -46,8 +43,8 @@
   
     	<div id="wrapper">
     	  	<div class="nav">
-    		导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    	</div>
+    			导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    		</div>
     		<div id="main">
     			这是内容区,可以滑动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     		</div>
