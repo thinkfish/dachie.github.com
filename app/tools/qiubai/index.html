@@ -9,10 +9,16 @@
         </title>
         <style type="text/css">		
 		body{background:#000;color:#fff;margin:0;padding:0;}
-		#wrapper{width:100%;position:relative;}
-		#wrapper div{float:left;}
+		
+		
+		#wrapper{
+			float:left;
+			position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+			z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+			overflow:hidden;
+			}
 		#main{background:blue;position:absolute;z-index:100;}
-		.nav{background:red;position:relative;}
+		.nav{background:red;}
         </style>
         <script src="zepto.js">
         </script>
