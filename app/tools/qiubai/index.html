@@ -28,7 +28,17 @@
                 		//this.style.webkitTransform = 'translate(' + e.targetTouches[0].clientX-($("#main").width()/2) + 'px)';			
 			}
 		});
-		myscroll=new iScroll("wrapper");
+		myscroll=new iScroll("wrapper",{
+
+                       snap:true,
+
+                       momentum:false,
+
+                       hScrollbar:false,
+
+                       vScrollbar: false
+
+                  });
         });
 
         </script>
