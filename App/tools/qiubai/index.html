@@ -8,7 +8,8 @@
             糗事百科
         </title>
         <style type="text/css">
-			body{background:#000;}
+		
+			body{background:#000;color:#fff;}
 			#wrapper{width:100%;}
 			#scroller{width:200%;}
 			.tools{background:red;width:50%;}
@@ -21,7 +22,11 @@
         <script type="text/javascript">
 			var myScroll;
 			$(function(){
-				myScroll = new iScroll('wrapper');
+				myScroll = new iScroll('wrapper',{
+					snap: true,
+					momentum: false,
+					hScrollbar: false
+				});
 			});
         </script>
     </head>
@@ -29,8 +34,8 @@
     <body>
 		<div id="wrapper">			
 			<div id="scroller">
-				<div class="tools"></div>
-				<div class="main"></div>
+				<div class="tools">1</div>
+				<div class="main">2</div>
 			</div>
 		</div>
     </body>
