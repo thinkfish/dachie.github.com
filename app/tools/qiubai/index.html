@@ -8,33 +8,29 @@
             糗事百科
         </title>
         <style type="text/css">		
-			body{background:#000;color:#fff;margin:0;padding:0;}
-			#dachie{width:100%;position:relative;}
-			#wrapper{width:100%;position:absolute;}
-			#wrapper div{position:absolute;}
-			.tools{background:red;width:10%;left:-10%;}
-			.main{background:blue;width:100%;}
+		body{background:#000;color:#fff;margin:0;padding:0;}
+		#wrapper{width:100%;position:relative;}
+		#main{background:blue;width:100%;position:absolute;z-index:100;}
+		.nav{background:red;position:relative;width:100%;}
         </style>
         <script src="zepto.js">
         </script>
-		<script src="iscroll.js">
-        </script>
         <script type="text/javascript">
-			var myscroll;
-			$(function(){
-				 myscroll=new iScroll("dachie"); 
-			});
+        	$("#mian").bind("touchmove",function(e){
+        		console.log(e);
+        	});
         </script>
     </head>
     
     <body>
-		<div id="dachie">
-			<div id="wrapper">		
-					<div class="tools">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
-
-							<div class="main">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
-			</div>
-		</div>
+    	<div id="wrapper">
+    		<div id="main">
+    			这是内容区,可以滑动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    		</div>
+    		<div class="nav">
+    			导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    		</div>
+    	</div>
     </body>
 
 </html>
