@@ -15,17 +15,20 @@
         </style>
         <script src="zepto.js">
         </script>
+	<script src="iscroll.js">
+        </script>
         <script type="text/javascript">
         $(function(){
         	$(document).bind("touchmove",function(e){
-			e.preventDefault();        		
+			//e.preventDefault();        		
         	})
 		$("#main").bind("touchmove",function(e){
 			if(e.targetTouches.length==1){
-                		e.preventDefault();
-                		this.style.webkitTransform = 'translate(' + e.targetTouches[0].clientX-($("#main").width()/2) + 'px)';			
+                		//e.preventDefault();
+                		//this.style.webkitTransform = 'translate(' + e.targetTouches[0].clientX-($("#main").width()/2) + 'px)';			
 			}
-		});	
+		});
+		myscroll=new iScroll("wrapper");
         });
 
         </script>
