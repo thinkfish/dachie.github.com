@@ -19,7 +19,8 @@
         $(function(){
 	$("#mian").bind("touchmove",function(event){
 		if （event.targetTouches.length == 1） { 
-			var touch = event.targetTouches[0]; 
+			var touch = event.targetTouches[0];
+			alert(touch);
 			// 把元素放在手指地点的地位 
 			this.style.left = touch.pageX + ""px""; 
 		} 
