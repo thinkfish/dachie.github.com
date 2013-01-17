@@ -11,21 +11,28 @@
 			body{background:#000;color:#fff;margin:0;padding:0;}
 			#wrapper{width:100%;position:relative;}
 			#wrapper div{position:absolute;}
-			.tools{background:red;width:10%;left:10%;}
+			.tools{background:red;width:10%;left:-10%;}
 			.main{background:blue;width:100%;}
         </style>
         <script src="zepto.js">
         </script>
+		<script src="iscroll.js">
+        </script>
         <script type="text/javascript">
-			
+			var myscroll;
+			$(function(){
+				 myscroll=new iScroll("dachie"); 
+			});
         </script>
     </head>
     
     <body>
-		<div id="wrapper">		
-				<div class="tools">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+		<div id="dachie">
+			<div id="wrapper">		
+					<div class="tools">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
 
-						<div class="main">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+							<div class="main">123123123123123123123123123123123123<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+			</div>
 		</div>
     </body>
 
