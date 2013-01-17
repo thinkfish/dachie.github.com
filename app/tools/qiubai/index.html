@@ -19,7 +19,7 @@
         $(function(){
 		$("#main").bind("touchmove",function(e){
 			if(e.targetTouches.length==1){				
-				alert(this.style.left);				
+				alert(e.targetTouches[0].pageX);				
 			}
 		});	
         });
