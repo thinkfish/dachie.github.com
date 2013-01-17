@@ -16,7 +16,7 @@
 			position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
 			z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
 			overflow:hidden;
-			width:640px;
+			width:320px;
 			}
 		#main{background:blue;position:absolute;z-index:100;width:320px;}
 		.nav{background:red;width:320px;}
@@ -44,10 +44,10 @@
     </head>
     
     <body>
+    	<div class="nav">
+    		导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    	</div>
     	<div id="wrapper">
-		<div class="nav">
-    			导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    		</div>
     		<div id="main">
     			这是内容区,可以滑动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     		</div>
