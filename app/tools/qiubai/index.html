@@ -16,9 +16,16 @@
         <script src="zepto.js">
         </script>
         <script type="text/javascript">
-        	$("#mian").bind("touchmove",function(e){
-        		alert(e);
-        	});
+        $(function(){
+	$("#mian").bind("touchmove",function(event){
+		if （event.targetTouches.length == 1） { 
+			var touch = event.targetTouches[0]; 
+			// 把元素放在手指地点的地位 
+			obj.style.left = touch.pageX + ""px""; 
+		} 
+	});	
+        });
+
         </script>
     </head>
     
