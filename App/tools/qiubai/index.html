@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>
+            糗事百科
+        </title>
+        <style type="text/css">
+			body{background:#000;}
+			#wrapper{width:100%;}
+			#scroller{width:200%;}
+			.tools{background:red;width:50%;}
+			.main{background:blue;width:50%;}
+        </style>
+        <script src="zepto.js">
+        </script>
+        <script src="iscroll.js">
+        </script>		
+        <script type="text/javascript">
+			var myScroll;
+			$(function(){
+				myScroll = new iScroll('wrapper');
+			});
+        </script>
+    </head>
+    
+    <body>
+		<div id="wrapper">			
+			<div id="scroller">
+				<div class="tools"></div>
+				<div class="main"></div>
+			</div>
+		</div>
+    </body>
+
+</html>
