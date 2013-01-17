@@ -18,12 +18,7 @@
         <script type="text/javascript">
         $(function(){
 		$("#main").bind("touchmove",function(e){
-			if （e.targetTouches.length == 1） { 
-				var touch = e.targetTouches[0];
-				alert(touch);
-				// 把元素放在手指地点的地位 
-				this.style.left = touch.pageX + ""px""; 
-			} 
+			alert(e.targetTouches.length);
 		});	
         });
 
