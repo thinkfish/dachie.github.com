@@ -17,10 +17,10 @@
         </script>
         <script type="text/javascript">
         $(function(){
-	$("#mian").bind("touchmove",function(event){
-		alert(event.targetTouches.length);
-		if （event.targetTouches.length == 1） { 
-			var touch = event.targetTouches[0];
+	$("#mian").bind("touchmove",function(e){
+		alert(e.targetTouches.length);
+		if （e.targetTouches.length == 1） { 
+			var touch = e.targetTouches[0];
 			alert(touch);
 			// 把元素放在手指地点的地位 
 			this.style.left = touch.pageX + ""px""; 
