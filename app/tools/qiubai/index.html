@@ -17,8 +17,9 @@
         </script>
         <script type="text/javascript">
         $(function(){
-		$("#main").bind("touchmove",function(e){
-			alert(e.targetTouches.length);
+		$("#main").bind("touchmove",function(e){			
+			if （e.targetTouches.length == 1） {
+			}
 		});	
         });
 
