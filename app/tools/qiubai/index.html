@@ -18,8 +18,8 @@
 			overflow:hidden;
 			width:640px;
 			}
-		#main{background:blue;position:absolute;z-index:100;}
-		.nav{background:red;width:100%;}
+		#main{background:blue;position:absolute;z-index:100;width:320px;}
+		.nav{background:red;width:320px;}
         </style>
         <script src="zepto.js">
         </script>
@@ -27,15 +27,6 @@
         </script>
         <script type="text/javascript">
         $(function(){
-        	$(document).bind("touchmove",function(e){
-			//e.preventDefault();        		
-        	})
-		$("#main").bind("touchmove",function(e){
-			if(e.targetTouches.length==1){
-                		//e.preventDefault();
-                		//this.style.webkitTransform = 'translate(' + e.targetTouches[0].clientX-($("#main").width()/2) + 'px)';			
-			}
-		});
 		myscroll=new iScroll("wrapper",{
 
                        snap:true,
@@ -54,11 +45,11 @@
     
     <body>
     	<div id="wrapper">
+		<div class="nav">
+    			导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    		</div>
     		<div id="main">
     			这是内容区,可以滑动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    		</div>
-    		<div class="nav">
-    			导航栏静止不动<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     		</div>
     	</div>
     </body>
