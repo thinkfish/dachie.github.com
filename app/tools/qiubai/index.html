@@ -18,6 +18,7 @@
         <script type="text/javascript">
         $(function(){
 	$("#mian").bind("touchmove",function(event){
+		alert(event.targetTouches.length);
 		if （event.targetTouches.length == 1） { 
 			var touch = event.targetTouches[0];
 			alert(touch);
