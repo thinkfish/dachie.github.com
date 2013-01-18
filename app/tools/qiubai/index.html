@@ -21,9 +21,13 @@
 			$(document).bind("touchmove",function(e){
 				e.preventDefault();
 			});
-			$("#main").bind("touchstart",function(e){
+			$("#main").swipeLeft(function(e){
 				e.preventDefault();
-				$(this).toggleClass("open");			
+				$(this).removeClass("open");			
+			});
+			$("#main").swipeRight(function(e){
+				e.preventDefault();
+				$(this).addClass("open");			
 			});
 		});
         </script>
