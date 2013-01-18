@@ -12,15 +12,14 @@
 		#wrapper div{float:left;-webkit-transition:all 1.5s ease;}
 		#wrapper #main{top:0;background:blue;z-index:100;width:100%;position:absolute;-webkit-transform:translate(0,0)}	
 		#wrapper #main.open{-webkit-transform:translate(200px,0)}
-		#wrapper .nav{background:red;width:0;}
-		#wrapper .nav.open{width:200px;}
+		#wrapper .nav{background:red;width:200px;}
         </style>
         <script src="zepto.js">
         </script>
         <script type="text/javascript">
 		$(function(){
 			$("#main").bind("click",function(){
-				$("#main,.nav").toggleClass("open");			
+				$("#main").toggleClass("open");			
 			});
 		});
         </script>
