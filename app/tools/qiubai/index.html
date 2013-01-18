@@ -18,6 +18,9 @@
         </script>
         <script type="text/javascript">
 		$(function(){
+			$(document).bind("touchmove",function(e){
+				e.preventDefault();
+			});
 			$("#main").bind("touchstart",function(e){
 				e.preventDefault();
 				$(this).toggleClass("open");			
