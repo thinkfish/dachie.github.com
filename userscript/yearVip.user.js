@@ -24,7 +24,8 @@ window.onload = function () {
                 two = setTimeout(function () {
                     document.querySelectorAll(".btn_fit_em_pop")[i].click();
                     if (i >= l) {
-                        alert("今日抽奖完成！");
+                        document.getElementById("prize_list_btn").click();
+                        alert("今日抽奖已完成！");
                         clearInterval(one);
                         clearTimeout(two);
                     }
