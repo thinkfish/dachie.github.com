@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       德阳旅游形象大使排名 Top 10
 // @namespace  http://dachie.com
-// @version    0.1
+// @version    0.2
 // @description  德阳旅游形象大使排名 Top 10
 // @match      http://www.dystour.com/ds/finalist.aspx
 // @copyright  2013+, Dachie
