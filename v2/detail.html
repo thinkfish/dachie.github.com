@@ -17,10 +17,11 @@
             /* Enable use of floated navbar text */
             .navbar-text.pull-right { float: none; padding-left: 5px; padding-right: 5px; }
         }
+
         #attr dl { }
         #attr dt { width: 80px; }
         #attr dd { margin-left: 90px; }
-		#bmap{height:300px;}
+        #bmap { height: 200px; margin-bottom: 20px; }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -96,9 +97,6 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span3">
-                <div class="row-fluid">
-                    <div id="bmap" class="span12"></div>
-                </div>
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="well sidebar-nav">
@@ -182,7 +180,11 @@
                                     <dt>交通：</dt>
                                     <dd>地铁1号线天安门东、西站可到达，多路公交可到达</dd>
                                 </dl>
-                            </div>
+                                <dl class="dl-horizontal">
+                                    <dt>位置：</dt>
+                                    <dd><div id="bmap"></div></dd>
+                                </dl>
+                            </div>                            
                         </div>
                     </div>
                     <div class="row-fluid">
@@ -238,10 +240,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
     <script type="text/javascript">
-        $(function(){
-            new BMap.Map("bmap").centerAndZoom(new BMap.Point(116.4035,39.915),15);
+        $(function () {
+            new BMap.Map("bmap").centerAndZoom(new BMap.Point(116.4035, 39.915), 15);
             $("#myCarousel").carousel();
-        });        
+        });
     </script>
 </body>
 </html>
