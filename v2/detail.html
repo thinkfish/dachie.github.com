@@ -95,16 +95,21 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span3">
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">市区景点</li>
-                        <li class="active"><a href="#">颐和园</a></li>
-                        <li><a href="#">故宫</a></li>
-                        <li class="nav-header">郊区景点</li>
-                        <li><a href="#">八达岭长城</a></li>
-                    </ul>
+                <div class="row-fluid">
+                    <div id="bmap"></div>
                 </div>
-                <!--/.well -->
+                <div class="row-fluid">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">市区景点</li>
+                            <li class="active"><a href="#">颐和园</a></li>
+                            <li><a href="#">故宫</a></li>
+                            <li class="nav-header">郊区景点</li>
+                            <li><a href="#">八达岭长城</a></li>
+                        </ul>
+                    </div>
+                    <!--/.well -->
+                </div>
             </div>
             <!--/span-->
             <div class="span9">
@@ -229,8 +234,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
     <script type="text/javascript">
-        $("#myCarousel").carousel();
+        $(function(){
+            new BMap.Map("bmap").centerAndZoom(new BMap.Point(116.4035,39.915),15);
+            $("#myCarousel").carousel();
+        });        
     </script>
 </body>
 </html>
