@@ -16,15 +16,20 @@
         @media (max-width: 980px) {
             /* Enable use of floated navbar text */
             .navbar-text.pull-right { float: none; padding-left: 5px; padding-right: 5px; }
-            #myCarousel { height: 169px; overflow: hidden; width:300px;}
-            #bmap { height: 150px; margin-bottom: 20px; width: 225px; }
         }
+
+
 
         #attr dl { }
         #attr dt { width: 80px; }
         #attr dd { margin-left: 90px; }
         #bmap { height: 300px; margin-bottom: 20px; width: 450px; }
         #myCarousel { height: 338px; overflow: hidden; width:600px;}
+
+        @media (max-device-width: 480px) {
+            #bmap { height: 150px; margin-bottom: 20px; width: 225px; }
+            #myCarousel { height: 169px; overflow: hidden; width:300px;}
+        }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
