@@ -241,7 +241,7 @@
         <!--/row-->
         <hr>
         <footer>
-            <p>&copy; Company 2013</p>
+            <p>&copy; Company 2013 <a href="http://www.miibeian.gov.cn">冀ICP备12001513号-2</a></p>
         </footer>
     </div>
     <!--/.fluid-container-->
@@ -253,7 +253,12 @@
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
     <script type="text/javascript">
         $(function () {
-            new BMap.Map("bmap").centerAndZoom(new BMap.Point(116.4035, 39.915), 15);
+            var map = new BMap.Map("bmap");
+            var point = new BMap.Point(116.404, 39.915);
+            map.centerAndZoom(point, 15);
+            var marker = new BMap.Marker(point);  
+            map.addOverlay(marker);              
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE); 
             $("#myCarousel").carousel();
         });
     </script>
