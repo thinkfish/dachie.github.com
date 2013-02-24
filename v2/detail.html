@@ -21,24 +21,27 @@
 
 
         #attr dl { }
-        #attr dt { width: 80px; }
-        #attr dd { margin-left: 90px; }
+        #attr dt { width: 80px;display:inline-block; }
+        #attr dd { margin-left: 10px;display:inline-block;vertical-align:top; }
         #bmap { height: 300px; margin-bottom: 20px; width: 450px; }
         #myCarousel { height: 338px; overflow: hidden; width: 600px; }
 
-        @media (max-device-width: 768px) {
+        @media (max-width: 768px) {
             #bmap { height: 200px; margin-bottom: 20px; width: 300px; }
-            #myCarousel { height: 225px; overflow: hidden; width: 400px; }
+            #myCarousel { height: 225px; overflow: hidden; width: 400px; }	
+		#attr dd { width:400px; }    
         }
 
         @media (max-width: 480px) {
             #bmap { height: 200px; margin-bottom: 20px; width: 300px; }
             #myCarousel { height: 248px; overflow: hidden; width: 440px; }
+		#attr dd { width:300px; }
         }
 
         @media (max-width: 320px) {
             #bmap { height: 133px; margin-bottom: 20px; width: 200px; }
             #myCarousel { height: 158px; overflow: hidden; width: 280px; }
+		#attr dd { width:150px; }
         }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
