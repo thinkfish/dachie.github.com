@@ -66,6 +66,10 @@
 
 	/*手动加水*/
 	$("#btn").click(function(){
+		if(detect()>9){
+			alert("貌似你这个小孩不太听话!\r\n让你每秒点一下!!\r\n请不要用撸的速度!!!");
+			return false;
+		}
 		enter();
 	});
   </script>
