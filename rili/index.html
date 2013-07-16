@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 随手日历 </title>  
+  <style>
+  *{margin:0;padding:0;}
+  .dq_calendar{
+	width:100%;	
+  }
+  .dq_calendar_c{
+	width:100%;
+  }
+  .dq_calendar_c ul{
+	width:100%;
+  }
+  .dq_calendar_c ul li{
+	width:14%;
+	display:inline-block;
+	line-height:50px;	
+	text-align:center;
+	border:1px solid #eee;
+	word-spacing:0;
+  }
+  .dq_calendar_c ul li.today{border:2px solid blue;}
+
+  .dq_calendar_t{
+	width:100%;
+  }
+
+  .dq_calendar_t a,.dq_calendar_t span{
+    display:inline-block;
+	text-align:center;
+	width:33%;
+	font-family:"微软雅黑";
+	font-size:26px;
+	line-height:50px;
+	word-spacing:0;
+	float:left;
+  }
+
+  </style>
+ </head>
+ <body>
+<div class="dq_calendar">
+ <div class="dq_calendar_t">
+	<a href="javascript:;" id="prev">上月</a>
+	<span id="showDate"></span>
+	<a href="javascript:;" id="next">下月</a>
+ </div>
+  <div class="dq_calendar_c" id="table1">
+  </div>
+
+</div>
+	<script>
+
+		if ( ! Array.prototype.map ) {
+			Array.prototype.map = function ( callback ) {
+				var len = this.length;
+				if ( typeof callback != 'function' )
+					throw new TypeError ( );
+				
+				var res = new Array ( len );
+				var thisArg = arguments [ 1 ];
+				for ( var i = 0 ; i < len ; i ++ ) {
+					if ( i in this ) {
+						res [ i ] = callback.call ( thisArg , this [ i ] , i , this );
+					}
+				}
+				return res;
+			};
+		}
+
+		function Calendar (){
+			this.curDate = new Date();
+			this.y = this.curDate.getFullYear();
+			this.m = this.curDate.getMonth();
+			this.box = "table1";
+			this._prev = "prev";
+			this._next = "next";
+			t = this;
+		}
+
+		Calendar.prototype={
+			init:function(){
+				t.render();
+				t.bindEvent();
+			},
+			prev:function(){
+				t.curDate = new Date(t.y,t.m,0);
+				t.y = t.curDate.getFullYear();
+				t.m = t.curDate.getMonth();
+				t.render();
+			},
+			next:function(){
+				t.curDate = new Date(t.y,t.m+2,0);
+				t.y = t.curDate.getFullYear();
+				t.m = t.curDate.getMonth();
+				t.render();
+			},
+			makeDays:function(){
+				var allDays = [];
+				var week = new Date(t.y,t.m-1,1).getDay();
+				var days = new Date(t.y,t.m,0).getDate();
+				for(var i = 1;i <= 42; i++){
+					var curDay = i - week;
+					if(i<=week || curDay > days)
+						allDays.push(0);
+					else
+						allDays.push(curDay);
+				}
+				return allDays;
+			},
+			render: function(){
+				var arr = t.makeDays();
+				var table = document.getElementById(t.box);
+				
+				table.innerHTML = ["日","一","二","三","四","五","六"].map(function(item,idx){
+					return ((idx%7)==0?"<ul>":"")+"<li>"+(!!item?item:"&nbsp;")+"</li>"+((idx%7)==6?"</ul>":"");
+				}).join('');
+				table.innerHTML += arr.map(function(item,idx){	
+					var today = new Date(t.y,t.m,item).toDateString()==new Date().toDateString();
+					return ((idx%7)==0?"<ul>":"")+"<li "+(today?"class=today":"")+">"+(!!item?item:"&nbsp;")+"</li>"+((idx%7)==6?"</ul>":"");
+				}).join('');
+
+				document.getElementById("showDate").innerText = t.y+"年"+(t.m+1)+"月";
+			},
+			bindEvent:function(){
+				document.getElementById(t._prev).onclick=function(){
+					t.prev();
+				};
+				document.getElementById(t._next).onclick=function(){
+					t.next();
+				};
+			}
+		};
+
+		var c = new Calendar();
+		c.init();
+
+
+
+	</script>
+ </body>
+</html>
