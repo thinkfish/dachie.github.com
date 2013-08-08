@@ -70,13 +70,14 @@
 				if(l<this.cols){
 					return {top:this.cache[l-1].style.top,left:(parseInt(this.cache[l-1].style.left)+960/this.cols)+"px"};
 				}else{
-					this.cache.sort(function(x,y){
+					var _cache = this.cache;
+					_cache.sort(function(x,y){
 						var _x = parseInt(x.style.top)+parseInt(x.style.height);
 						var _y = parseInt(y.style.top)+parseInt(y.style.height);
 						return _x >	_y;
 					});
-					var _top  = parseInt(this.cache[0].style.top)+parseInt(this.cache[0].style.height);
-					return {top:_top+"px",left:this.cache[0].style.left};
+					var _top  = parseInt(_cache[0].style.top)+parseInt(_cache[0].style.height);
+					return {top:_top+"px",left:_cache[0].style.left};
 				}
 			}
 
