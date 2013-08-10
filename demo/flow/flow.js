@@ -69,7 +69,7 @@ Flow.prototype={
 		if(l<this.cols){
 			return {top:this.cache[l-1].style.top,left:(parseInt(this.cache[l-1].style.left)+960/this.cols)+"px"};
 		}else{
-			var _cache = this.cache.slice(0);
+			var _cache = this.cache;
 			_cache.sort(function(x,y){
 				var _x = parseInt(x.style.top)+parseInt(x.style.height);
 				var _y = parseInt(y.style.top)+parseInt(y.style.height);
