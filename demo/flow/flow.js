@@ -41,10 +41,10 @@ Flow.prototype={
 			that.addCache(el);
 			els.appendChild(el);
 			i++;
-			//if(i%that.cols==0){
+			if(i%that.cols==0){
 				document.getElementById("flow1").appendChild(els);
 				els = document.createDocumentFragment();
-			//}
+			}
 			if(!(i<that.arr.length)){
 				clearInterval(timer);
 				document.getElementById("flow1").appendChild(els);
